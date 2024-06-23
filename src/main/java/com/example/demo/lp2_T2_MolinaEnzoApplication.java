@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Temporal2Application {
+public class lp2_T2_MolinaEnzoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Temporal2Application.class, args);
+		SpringApplication.run(lp2_T2_MolinaEnzoApplication.class, args);
 	}
 
 }
