@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +29,6 @@ public class AreaEntity {
 	@Column(name ="area_id")
 	private int areaId;
 	
-	@Column(name = "nombre_area")
+	@Column(name = "nombre_area", length = 45)
 	private String nombre;
 }

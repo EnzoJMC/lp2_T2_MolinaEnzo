@@ -2,7 +2,10 @@ package com.example.demo.entity;
 
 
 
+import java.time.LocalDate;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -26,22 +29,23 @@ import lombok.ToString;
 public class EmpleadoEntity {
 	
 	@Id
-	@Column(name = "dni_empleado")
+	@Column(name = "dni_empleado", columnDefinition = "CHAR(8)")
 	private String dni;
 	
-	@Column(name = "nombre_empleado")
+	@Column(name = "nombre_empleado", length = 45)
 	private String nombre;
 	
-	@Column(name = "apellido_empleado")
+	@Column(name = "apellido_empleado", length = 45)
 	private String apellido;
 	
 	@Column(name = "fecha_nacimiento")
-	private Date fechNac;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	private LocalDate fechNac;
 	
-	@Column(name = "direccion")
+	@Column(name = "direccion", length = 45)
 	private String direccion;
 	
-	@Column(name = "correo")
+	@Column(name = "correo", length = 45)
 	private String correo;
 	
 	@ManyToOne
